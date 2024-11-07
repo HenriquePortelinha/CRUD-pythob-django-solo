@@ -1,0 +1,6 @@
+3. Sistema de Controle de Estoque
+Ideal para treinar relações de banco de dados e CRUD:
+Cadastro e gerenciamento de produtos, incluindo quantidade em estoque.
+Registro de vendas, atualizando o estoque automaticamente.
+Relatórios de produtos mais vendidos e de movimentação de estoque.
+Sistema de busca e filtros (por categoria, data, etc.).

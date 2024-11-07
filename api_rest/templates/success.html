@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso</title>
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+</head>
+<body>
+    <div class="container success-page">
+        <h2>Cadastro Bem-sucedido!</h2>
+        <p>Seu cadastro foi realizado com sucesso. Agora você pode acessar sua conta.</p>
+        <a href="{% url 'login' %}" class="button">Fazer Login</a>
+    </div>
+</body>
+</html>

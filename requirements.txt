@@ -1,0 +1,27 @@
+# Django  
+Django>=3.2,<5.0               # Versão estável do Django  
+djangorestframework             # Para construção de APIs RESTful  
+django-cors-headers             # Para permitir CORS  
+
+# Banco de Dados  
+psycopg2-binary                 # Conector para PostgreSQL  
+mysqlclient 
+                    # Conector para MySQL  
+
+# Bibliotecas de Desenvolvimento  
+flake8                           # Para linting de código  
+black                            # Para formatação de código  
+pytest                           # Para testes  
+
+# Frontend e Templates  
+django-webpack-loader           # Para integrar webpack ao Django  
+django-crispy-forms             # Para estilização de formulários  
+
+# Autenticação e Segurança  
+django-allauth                  # Para autenticação social e gerenciamento de usuários  
+djangorestframework-simplejwt    # Para autenticação JWT  
+
+# Outros  
+pillow                           # Para manipulação de imagens  
+requests                         # Para fazer requisições HTTP  
+celery                 

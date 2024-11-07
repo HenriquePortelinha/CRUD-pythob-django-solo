@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+    <link rel="stylesheet" href="{% static 'css/user_list.css' %}">
+</head>
+<body>
+    <div class="container user-list-page">
+        <h2>Lista de Usuários</h2>
+
+        <table>
+            <thead>
+                <tr>
+                   <th>Nome</th> 
+                    <th>Email</th> 
+                     <th>Nickname</th> 
+                    <th>Ações</th> 
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.user_name }}</td>
+                    <td>{{ user.user_email }}</td>
+                    <td>{{ user.user_nickname }}</td>
+                    <td>
+                        {% if user.user_nickname %}
+                            <a href="{% url 'update_user' user.user_nickname %}" class="button">Editar</a>
+                            <a href="{% url 'delete_user' user.user_nickname %}" class="button delete-button">Deletar</a>
+                        {% else %}
+                            <span>Nick não disponível</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="4">Nenhum usuário registrado.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{% url 'register' %}" class="button">Cadastrar Novo Usuário</a>
+    </div>
+</body>
+</html>
